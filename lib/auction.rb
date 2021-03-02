@@ -7,7 +7,6 @@ class Auction
 
   def initialize
     @items = []
-    @attendees = []
 
   end
 
@@ -43,7 +42,14 @@ class Auction
     potential_revenue.sum
   end
 
-
-
+  def bidders
+    bidders = []
+    @items.each do |item|
+      if item.bids != {} && item.bids
+        bidders << item.bids.keys
+      end
+    end
+    bidders.flatten
+  end
 
 end
