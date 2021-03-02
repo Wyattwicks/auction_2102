@@ -11,5 +11,5 @@ class ItemTest < Minitest::Test
     assert_equal 'Chalkware Piggy Bank', @item1.name
     assert_equal 'Bamboo Picture Frame', @item2.name
   end
-  
+
 end
